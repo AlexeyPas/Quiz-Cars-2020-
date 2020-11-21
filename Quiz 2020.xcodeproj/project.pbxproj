@@ -13,6 +13,7 @@
 		559F81B92569626B00605274 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 559F81B72569626B00605274 /* Main.storyboard */; };
 		559F81BB2569626E00605274 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 559F81BA2569626E00605274 /* Assets.xcassets */; };
 		559F81BE2569626E00605274 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 559F81BC2569626E00605274 /* LaunchScreen.storyboard */; };
+		559F81C825696ADA00605274 /* QuiestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559F81C725696ADA00605274 /* QuiestionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		559F81BA2569626E00605274 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		559F81BD2569626E00605274 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		559F81BF2569626E00605274 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		559F81C725696ADA00605274 /* QuiestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuiestionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +59,23 @@
 			isa = PBXGroup;
 			children = (
 				559F81B12569626B00605274 /* AppDelegate.swift */,
-				559F81B32569626B00605274 /* SceneDelegate.swift */,
-				559F81B52569626B00605274 /* WelcomViewController.swift */,
-				559F81B72569626B00605274 /* Main.storyboard */,
 				559F81BA2569626E00605274 /* Assets.xcassets */,
-				559F81BC2569626E00605274 /* LaunchScreen.storyboard */,
 				559F81BF2569626E00605274 /* Info.plist */,
+				559F81BC2569626E00605274 /* LaunchScreen.storyboard */,
+				559F81B72569626B00605274 /* Main.storyboard */,
+				559F81B32569626B00605274 /* SceneDelegate.swift */,
+				559F81CA25696AFB00605274 /* View Controllers */,
 			);
 			path = "Quiz 2020";
+			sourceTree = "<group>";
+		};
+		559F81CA25696AFB00605274 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				559F81B52569626B00605274 /* WelcomViewController.swift */,
+				559F81C725696ADA00605274 /* QuiestionViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				559F81C825696ADA00605274 /* QuiestionViewController.swift in Sources */,
 				559F81B62569626B00605274 /* WelcomViewController.swift in Sources */,
 				559F81B22569626B00605274 /* AppDelegate.swift in Sources */,
 				559F81B42569626B00605274 /* SceneDelegate.swift in Sources */,
