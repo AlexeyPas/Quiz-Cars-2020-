@@ -15,6 +15,10 @@
 		559F81BE2569626E00605274 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 559F81BC2569626E00605274 /* LaunchScreen.storyboard */; };
 		559F81C825696ADA00605274 /* QuiestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559F81C725696ADA00605274 /* QuiestionViewController.swift */; };
 		55E9CC0C256A9E8900FACE53 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E9CC0B256A9E8900FACE53 /* ResultsViewController.swift */; };
+		55E9CC15256AA31A00FACE53 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E9CC14256AA31A00FACE53 /* Question.swift */; };
+		55E9CC18256AA38D00FACE53 /* ResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E9CC17256AA38D00FACE53 /* ResponseType.swift */; };
+		55E9CC1B256AA3F200FACE53 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E9CC1A256AA3F200FACE53 /* Answer.swift */; };
+		55E9CC1E256AA43900FACE53 /* AnimalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E9CC1D256AA43900FACE53 /* AnimalType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		559F81BF2569626E00605274 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		559F81C725696ADA00605274 /* QuiestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuiestionViewController.swift; sourceTree = "<group>"; };
 		55E9CC0B256A9E8900FACE53 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		55E9CC14256AA31A00FACE53 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		55E9CC17256AA38D00FACE53 /* ResponseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseType.swift; sourceTree = "<group>"; };
+		55E9CC1A256AA3F200FACE53 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		55E9CC1D256AA43900FACE53 /* AnimalType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,12 +68,9 @@
 		559F81B02569626B00605274 /* Quiz 2020 */ = {
 			isa = PBXGroup;
 			children = (
-				559F81B12569626B00605274 /* AppDelegate.swift */,
-				559F81BA2569626E00605274 /* Assets.xcassets */,
-				559F81BF2569626E00605274 /* Info.plist */,
-				559F81BC2569626E00605274 /* LaunchScreen.storyboard */,
-				559F81B72569626B00605274 /* Main.storyboard */,
-				559F81B32569626B00605274 /* SceneDelegate.swift */,
+				55E9CC10256AA23A00FACE53 /* App */,
+				55E9CC0E256AA1E800FACE53 /* Models */,
+				55E9CC0F256AA20200FACE53 /* View */,
 				559F81CA25696AFB00605274 /* View Controllers */,
 			);
 			path = "Quiz 2020";
@@ -79,6 +84,37 @@
 				55E9CC0B256A9E8900FACE53 /* ResultsViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		55E9CC0E256AA1E800FACE53 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				55E9CC14256AA31A00FACE53 /* Question.swift */,
+				55E9CC17256AA38D00FACE53 /* ResponseType.swift */,
+				55E9CC1A256AA3F200FACE53 /* Answer.swift */,
+				55E9CC1D256AA43900FACE53 /* AnimalType.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		55E9CC0F256AA20200FACE53 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				559F81BC2569626E00605274 /* LaunchScreen.storyboard */,
+				559F81B72569626B00605274 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		55E9CC10256AA23A00FACE53 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				559F81B12569626B00605274 /* AppDelegate.swift */,
+				559F81BA2569626E00605274 /* Assets.xcassets */,
+				559F81BF2569626E00605274 /* Info.plist */,
+				559F81B32569626B00605274 /* SceneDelegate.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,8 +190,12 @@
 				559F81C825696ADA00605274 /* QuiestionViewController.swift in Sources */,
 				559F81B62569626B00605274 /* WelcomViewController.swift in Sources */,
 				559F81B22569626B00605274 /* AppDelegate.swift in Sources */,
+				55E9CC15256AA31A00FACE53 /* Question.swift in Sources */,
 				55E9CC0C256A9E8900FACE53 /* ResultsViewController.swift in Sources */,
 				559F81B42569626B00605274 /* SceneDelegate.swift in Sources */,
+				55E9CC18256AA38D00FACE53 /* ResponseType.swift in Sources */,
+				55E9CC1B256AA3F200FACE53 /* Answer.swift in Sources */,
+				55E9CC1E256AA43900FACE53 /* AnimalType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +345,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R8P92U4Z6U;
 				INFOPLIST_FILE = "Quiz 2020/Info.plist";
+				"INFOPLIST_FILE[sdk=*]" = "Quiz 2020/App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,7 +364,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R8P92U4Z6U;
-				INFOPLIST_FILE = "Quiz 2020/Info.plist";
+				INFOPLIST_FILE = "Quiz 2020/App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
