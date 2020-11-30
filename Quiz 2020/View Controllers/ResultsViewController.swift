@@ -8,11 +8,38 @@
 import UIKit
 
 class ResultsViewController: UIViewController {
-
+    
+    @IBOutlet weak var animalsLable: UILabel!
+    @IBOutlet weak var defenitionLable: UILabel!
+    
+    let answers: [Answer]
+    
+    init?(coder: NSCoder, _ answers: [Answer]) {
+        self.answers = answers
+        super.init(coder: coder)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("\(#line) \(#function) init(coder:) has not been implemented")
+    }
+    
+    func calculatePersonalityResult() {
+        let frequencyOfAnswers = answers.reduce(into: [:]) { counts, answer in
+            counts[answer.type, default: 0] += 1
+        }
+        let frequencyOfAnswerSorted = frequencyOfAnswers.sorted { $0.value > $1.value }
+        let mostCommonAnswer = frequencyOfAnswerSorted.first!.key
+        updateUI(with: mostCommonAnswer)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        navigationItem.hidesBackButton = true
+        calculatePersonalityResult()
+    }
+    
+    func updateUI(with animal: AnimalType) {
+        animalsLable.text = "Вы - это \(animal.rawValue)"
+        defenitionLable.text = "\(animal.definition)"
     }
     
 
