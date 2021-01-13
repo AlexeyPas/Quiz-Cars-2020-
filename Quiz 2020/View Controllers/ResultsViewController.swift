@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class ResultsViewController: UIViewController {
     
     @IBOutlet weak var animalsLable: UILabel!
@@ -24,11 +25,15 @@ class ResultsViewController: UIViewController {
     }
     
     func calculatePersonalityResult() {
+        print(answers )
         let frequencyOfAnswers = answers.reduce(into: [:]) { counts, answer in
             counts[answer.type, default: 0] += 1
         }
+        print(frequencyOfAnswers)
         let frequencyOfAnswerSorted = frequencyOfAnswers.sorted { $0.value > $1.value }
+        print(frequencyOfAnswerSorted)
         let mostCommonAnswer = frequencyOfAnswerSorted.first!.key
+        print(mostCommonAnswer)
         updateUI(with: mostCommonAnswer)
     }
     override func viewDidLoad() {
@@ -38,7 +43,7 @@ class ResultsViewController: UIViewController {
     }
     
     func updateUI(with animal: AnimalType) {
-        animalsLable.text = "Вы - это \(animal.rawValue)"
+        animalsLable.text = "Вам подходит \(animal.rawValue)"
         defenitionLable.text = "\(animal.definition)"
     }
     

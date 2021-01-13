@@ -33,7 +33,7 @@ class QuestionViewController: UIViewController {
         currentQuestion.answers
     }
     private var currentQuestion: Question {
-        Question.allQuestions[questionIndex]
+        Question.allQuestion[questionIndex]
     }
 
     var questionIndex = 0
@@ -77,7 +77,7 @@ class QuestionViewController: UIViewController {
             stackView?.isHidden = true
         }
         
-        let totalProgress = Float(questionIndex) / Float(Question.allQuestions.count)
+        let totalProgress = Float(questionIndex) / Float(Question.allQuestion.count)
         
         navigationItem.title = "Вопрос № \(questionIndex + 1)"
         questionLable.text = currentQuestion.text
@@ -95,7 +95,7 @@ class QuestionViewController: UIViewController {
     
     func nextQuestin() {
         questionIndex += 1
-        if questionIndex < Question.allQuestions.count {
+        if questionIndex < Question.allQuestion.count {
             updateUI()
         } else {
             performSegue(withIdentifier: "Results Controller", sender: nil)
@@ -103,7 +103,7 @@ class QuestionViewController: UIViewController {
     }
 
     @IBAction func singleButtonPressed(_ sender: UIButton) {
-        let answers = Question.allQuestions[questionIndex].answers
+        let answers = Question.allQuestion[questionIndex].answers
         let index = sender.tag
         guard 0 <= index && index < answers.count else {
             return
